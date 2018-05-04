@@ -12,6 +12,31 @@
 */
 
 Route::post('authenticate', 'AuthenticateController@authenticate');
+Route::get('projects', function(){
+    $projects = [
+        [
+            "Id" => 1,
+            "name" => "P0",
+            "billableHours" => 10,
+            "cap" => 20,
+        ],
+        [
+            "Id" => 2,
+            "name" => "P1",
+            "billableHours" => 10,
+            "cap" => 0,
+        ],
+        [
+            "Id" => 3,
+            "name" => "P2",
+            "billableHours" => 30,
+            "cap" => 20
+        ],
+    ];
+    return $projects;
+}
+);
+
 
 Route::group(['middleware' => 'jwt.auth'], function()
 {

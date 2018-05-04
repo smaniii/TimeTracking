@@ -1,5 +1,5 @@
 <template>
-    <b-progress :max="getMaxOrValue" :value="value" :variant="getVariant"></b-progress>
+    <b-progress :max="getMaxOrValue" :value="value" :variant="getVariant" :show-progress="getShowProgress" :animated="getAnimated"></b-progress>
 </template>
 <script>
     import bProgress from 'bootstrap-vue/es/components/progress/progress';
@@ -30,6 +30,18 @@
                     return "secondary";
                 }
                 return "primary";
+            },
+            getShowProgress: function () {
+                if (this.max === 0) {
+                    return false;
+                }
+                return true;
+            },
+            getAnimated: function () {
+                if (this.max === 0) {
+                    return false;
+                }
+                return true;
             }
         }
     }

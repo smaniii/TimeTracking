@@ -23,6 +23,7 @@
         "vuex": "^3.0.1"
     },
     "dependencies": {
-        "bootstrap-vue": "^2.0.0-rc.9"
+        "bootstrap-vue": "^2.0.0-rc.9",
+        "vue-editortable": "^1.1.5"
     }
 }

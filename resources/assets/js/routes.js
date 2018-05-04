@@ -4,7 +4,8 @@ import ProfileWrapper from './components/profile/ProfileWrapper.vue';
 import Profile from './components/profile/Profile.vue';
 import EditProfile from './components/profile/edit-profile/EditProfile.vue';
 import EditPassword from './components/profile/edit-password/EditPassword.vue';
-import projectList from './components/tasktracking/projectlist.vue';
+import ProjectList from './components/tasktracking/ProjectList.vue';
+import Project from './components/tasktracking/Project.vue';
 
 export default [
 	{
@@ -51,7 +52,12 @@ export default [
 	},
 	{
 		path: '/project-list',
-		component:projectList,
+		component:ProjectList,
 		meta: {requiresAuth: true}
 	},
+    {
+        path: '/project/:id',
+        component:Project,
+        meta: {requiresAuth: true}
+    },
 ];
