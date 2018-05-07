@@ -2,6 +2,10 @@ import $ from 'jquery';
 import Vue from 'vue';
 import VueNoty from 'vuejs-noty';
 import axios from 'axios';
+import Vuetify from 'vuetify'
+import 'vuetify/dist/vuetify.min.css'
+import 'material-design-icons-iconfont/dist/material-design-icons.scss'
+Vue.use(Vuetify);
 
 window.$ = window.jQuery = $;
 window.axios = axios;

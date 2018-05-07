@@ -24,6 +24,9 @@
     },
     "dependencies": {
         "bootstrap-vue": "^2.0.0-rc.9",
-        "vue-editortable": "^1.1.5"
+        "material-design-icons-iconfont": "^3.0.3",
+        "vue-editortable": "^1.1.5",
+        "vue-template-compiler": "^2.5.16",
+        "vuetify": "^1.0.17"
     }
 }

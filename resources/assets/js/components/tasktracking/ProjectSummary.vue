@@ -1,6 +1,6 @@
 <template>
     <div>
-        <project-title class="text-center" :title="name" :projectId="projectId"></project-title>
+        <project-title class="text-center" :title="name" :projectid="projectid"></project-title>
         <progress-bar :max="max" :value="value"></progress-bar>
     </div>
 </template>
@@ -25,7 +25,7 @@
                 type: Number,
                 default: 0
             },
-            projectId: {
+            projectid: {
                 type: Number,
                 default: 1
             }

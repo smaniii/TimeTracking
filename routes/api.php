@@ -12,6 +12,11 @@
 */
 
 Route::post('authenticate', 'AuthenticateController@authenticate');
+
+Route::resource('developers', 'Api\DeveloperController');
+Route::resource('project', 'Api\ProjectController');
+Route::resource('time-log', 'Api\TimeController');
+
 Route::get('projects', function(){
     $projects = [
         [
@@ -36,7 +41,56 @@ Route::get('projects', function(){
     return $projects;
 }
 );
+Route::get('project/{id}', function(){
+    $project = [
+        [
+            "Id" => 1,
+            "name" => "P0",
+            "billableHours" => 10,
+            "cap" => 20,
+        ]
+    ];
+    return $project;
+}
+);
+Route::patch('project/{id}', function($id){
+    return $id;
+});
+Route::get('time-log/{id}', function(){
+    $project = [
+        [
+            "Id" => 1,
+            "name" => "Dev0",
+            "hoursWorked" => 20,
+            "hoursBilled" => 10,
+        ],
+        [
+            "Id" => 2,
+            "name" => "Dev2",
+            "hoursWorked" => 20,
+            "hoursBilled" => 20,
+        ],
+        [
+            "Id" => 3,
+            "name" => "Dev3",
+            "hoursWorked" => 20,
+            "hoursBilled" => 10,
+        ]
+    ];
+    return $project;
+});
 
+Route::put('time-log/{id}', function(){
+    $project = [
+        [
+            "Id" => 1,
+            "name" => "Dev0",
+            "hoursWorked" => 20,
+            "hoursBilled" => 20,
+        ],
+    ];
+    return $project;
+});
 
 Route::group(['middleware' => 'jwt.auth'], function()
 {

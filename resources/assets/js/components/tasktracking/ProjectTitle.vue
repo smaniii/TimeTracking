@@ -1,5 +1,5 @@
 <template>
-    <h2><a :href="'/project/' + projectId">{{title}}</a></h2>
+    <h2><a :href="'/project/' + projectid">{{title}}</a></h2>
 </template>
 <script>
     export default {
@@ -8,14 +8,14 @@
                 type: String,
                 default: "No Title"
             },
-            projectId: {
+            projectid: {
                 type: Number,
                 default: "1"
             }
         },
         computed: {
-            getProjectId: function () {
-                return this.projectId;
+            getProjectid: function () {
+                return this.projectid;
             }
         }
     }

@@ -896,11 +896,11 @@ TraceKit.computeStackTrace = (function computeStackTraceWrapper() {
         //
         // Statement on line 3: Undefined variable: undefinedFunc
         // Backtrace:
-        //   Line 3 of linked script file://localhost/Users/andreyvit/Projects/TraceKit/javascript-client/sample.js: In function zzz
+        //   Line 3 of linked script file://localhost/Users/andreyvit/Project/TraceKit/javascript-client/sample.js: In function zzz
         //         undefinedFunc(a);
-        //   Line 7 of inline#1 script in file://localhost/Users/andreyvit/Projects/TraceKit/javascript-client/sample.html: In function yyy
+        //   Line 7 of inline#1 script in file://localhost/Users/andreyvit/Project/TraceKit/javascript-client/sample.html: In function yyy
         //           zzz(x, y, z);
-        //   Line 3 of inline#1 script in file://localhost/Users/andreyvit/Projects/TraceKit/javascript-client/sample.html: In function xxx
+        //   Line 3 of inline#1 script in file://localhost/Users/andreyvit/Project/TraceKit/javascript-client/sample.html: In function xxx
         //           yyy(a, a, a);
         //   Line 1 of function script
         //     try { xxx('hi'); return false; } catch(ex) { TraceKit.report(ex); }
