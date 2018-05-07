@@ -55786,7 +55786,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
 
 
 
@@ -55934,6 +55933,14 @@ var render = function() {
                               "single-line": "",
                               rules: [_vm.rules.required, _vm.rules.number]
                             },
+                            on: {
+                              change: function($event) {
+                                _vm.updateTable([
+                                  props.item.id,
+                                  props.item.hoursBilled
+                                ])
+                              }
+                            },
                             slot: "input",
                             model: {
                               value: props.item.hoursBilled,
@@ -55981,6 +55988,13 @@ var render = function() {
           _vm._v(" "),
           _c(
             "v-form",
+            {
+              on: {
+                submit: function($event) {
+                  _vm.updateCap([_vm.projectid, _vm.max])
+                }
+              }
+            },
             [
               _c("v-text-field", {
                 staticStyle: { width: "50%" },

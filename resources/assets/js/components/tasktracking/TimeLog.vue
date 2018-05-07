@@ -30,6 +30,7 @@
                                 v-model="props.item.hoursBilled"
                                 single-line
                                 :rules="[rules.required,rules.number]"
+                                @change="updateTable([props.item.id,props.item.hoursBilled])"
                         ></v-text-field>
                     </v-edit-dialog>
                     <td class="text-xs-right">{{ props.item.name }}</td>
@@ -38,16 +39,14 @@
                     Your search for "{{ search }}" found no results.
                 </v-alert>
             </v-data-table>
-            <v-form >
+            <v-form @submit="updateCap([projectid,max])">
                 <v-text-field style="width: 50%"
                         v-model="max"
                         :rules="[rules.required,rules.number]"
                         :counter="10"
                         label="Project Cap"
                 ></v-text-field>
-                <v-btn
-                        @click="updateCap([projectid,max])"
-                >
+                <v-btn @click="updateCap([projectid,max])">
                     submit
                 </v-btn>
             </v-form>
